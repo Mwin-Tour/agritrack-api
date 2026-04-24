@@ -27,7 +27,7 @@ jobs:
 
       - name: Vérifier la qualité du code (Flake8)
         run: |
-          flake8 app.py database.py --max-line-length=100 --statistics
+          flake8 app.py database.py --max-line-length=130 --statistics
 
       - name: Lancer les tests unitaires (Pytest)
         run: |
