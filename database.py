@@ -60,5 +60,3 @@ def init_db():
     conn.commit()
     conn.close()
     print("✅ Base de données initialisée.")
-
-    
