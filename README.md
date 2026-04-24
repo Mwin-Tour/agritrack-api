@@ -184,7 +184,8 @@ Le pipeline CI/CD via **GitHub Actions** exécute automatiquement ces vérificat
 - `feat:` nouvelle fonctionnalité
 - `fix:` correction de bug
 - `docs:` mise à jour de la documentation
-- `test:` ajout ou modification de tests
+- `test:` ajout ou modific
+ation de tests
 - `chore:` tâches de maintenance
 
 ---
