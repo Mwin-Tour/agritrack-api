@@ -1,4 +1,5 @@
 import sqlite3
+from contextlib import contextmanager
 
 DATABASE = "agri_track.db"
 
@@ -45,11 +46,15 @@ VALUES
 """
 
 
-def get_db() -> sqlite3.Connection:
-    """Ouvre une connexion SQLite (sans contexte Flask)."""
+@contextmanager
+def get_db():
+    """Fournit une connexion SQLite fermée automatiquement."""
     conn = sqlite3.connect(DATABASE, detect_types=sqlite3.PARSE_DECLTYPES)
     conn.row_factory = sqlite3.Row
-    return conn
+    try:
+        yield conn
+    finally:
+        conn.close()
 
 
 def init_db():
@@ -59,4 +64,3 @@ def init_db():
     conn.executescript(SEED)
     conn.commit()
     conn.close()
-    print(" Base de données initialiséeeee.")
