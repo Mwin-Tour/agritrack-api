@@ -18,8 +18,8 @@ def enregistrer_recolte():
             return jsonify({"erreur": f"Le champ '{champ}' est obligatoire"}), 400
 
     type_produit = data["type_produit"]
-    poids_kg     = data["poids_kg"]
-    date         = data["date"]
+    poids_kg = data["poids_kg"]
+    date = data["date"]
     id_utilisateur = data["id_utilisateur"]
 
     # Validation métier
