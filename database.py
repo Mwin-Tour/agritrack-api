@@ -59,4 +59,4 @@ def init_db():
     conn.executescript(SEED)
     conn.commit()
     conn.close()
-    print(" Base de données initialisée.")
+    print(" Base de données initialiséeee.")
