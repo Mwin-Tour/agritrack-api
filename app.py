@@ -4,7 +4,9 @@ from database import init_db, get_db
 app = Flask(__name__)
 
 
-
+# ──────────────────────────────────────────
+# F4.1 — Enregistrer une nouvelle récolte
+# ──────────────────────────────────────────
 @app.route("/api/v1/recoltes", methods=["POST"])
 def enregistrer_recolte():
     data = request.get_json()
